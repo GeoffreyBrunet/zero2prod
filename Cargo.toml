@@ -5,5 +5,19 @@ authors = ["Geoffrey <geoffrey.brunet@quartz-insight.com>"]
 edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+path = "src/lib.rs"
+[[bin]]
+path = "src/main.rs"
+name = "zero2prod"
 
 [dependencies]
+actix-web = "4.0.0-beta.4"
+config = { version = "0.11.0", default-features = false, features = ["yaml"] }
+reqwest = { version = "0.11", default-features = false, features = ["json", "rustls-tls"] }
+serde = { version = "1", features = ["derive"]}
+sqlx = { version = "0.5.1", default-features = false, features = [ "runtime-actix-rustls", "macros", "postgres", "uuid", "chrono", "migrate", "offline"] }
+
+[dev-dependencies]
+actix-rt = "2"
+tokio = "1"

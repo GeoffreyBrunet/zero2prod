@@ -21,3 +21,13 @@ cargo fmt -- --check
 ```
 cargo audit
 ```
+
+### [cargo-edit](https://github.com/killercup/cargo-edit), a utility for managing cargo dependencies from the command line
+```
+cargo add some_package --vers some_version
+```
+
+### [cargo-expand](https://github.com/dtolnay/cargo-expand), subcommand to show result of macro expansion
+```
+cargo expand
+```
