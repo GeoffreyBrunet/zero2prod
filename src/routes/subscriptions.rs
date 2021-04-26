@@ -45,9 +45,6 @@ pub async fn subscribe(
         );
         HttpResponse::InternalServerError().finish()
     })?;
-    log::info!(
-        "request_id {} - New subscriber have been saved",
-        request_id
-    );
+    log::info!("request_id {} - New subscriber have been saved", request_id);
     Ok(HttpResponse::Ok().finish())
 }
